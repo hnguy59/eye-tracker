@@ -1,53 +1,27 @@
 <script>
-	import Header from './Header.svelte';
-	import './styles.css';
+	import Header from '$lib/layout/Header.svelte';
+	import Footer from '$lib/layout/Footer.svelte';
+	import '$lib/styles/tailwind.css';
 </script>
 
-<div class="app">
+<svelte:head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" />
+</svelte:head>
+
+<main id="layout">
 	<Header />
-
-	<main>
+	<body>
 		<slot />
-	</main>
+	</body>
+	<Footer />
+</main>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
+<style lang="postcss">
 	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
+		transition:
+			background-color 0.2s ease-in-out,
+			color 0.2s ease-in-out;
+		font-family: 'Caveat';
+		@apply bg-white dark:bg-black text-black dark:text-white text-center w-screen h-screen flex flex-col items-center justify-center gap-10;
 	}
 </style>
