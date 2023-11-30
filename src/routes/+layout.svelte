@@ -24,4 +24,7 @@
 		font-family: 'Caveat';
 		@apply bg-white dark:bg-black text-black dark:text-white text-center w-screen h-screen flex flex-col items-center justify-center gap-10;
 	}
+	body {
+		@apply w-full
+	}
 </style>

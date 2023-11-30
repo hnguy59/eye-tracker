@@ -44,7 +44,7 @@
 
 <style lang="postcss">
 	#links {
-		@apply flex flex-row gap-10 items-center justify-center;
+		@apply flex flex-row gap-10 items-center justify-center m-auto flex-wrap w-[80%];
 	}
 	h2 {
 		@apply text-center text-4xl;
